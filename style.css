@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	overflow: hidden;
+}
+.carousel{
+	width: 100%;
+   height: 100vh;
+}
+.carousel img{
+	width: 100%;
+	height: 100vh;
+}
+.carousel-caption{
+	position: absolute;
+	top: 150px;
+	font-family: 'Montserrat', sans-serif;
+}
+.carousel-item h5{
+	font-family: "Montserrat,sans-serif";
+	font-size: 29px;
+
+}
+.carousel-item p{
+	
+	font-size: 24px;
+
+}
+#header .header{
+	position: fixed;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.logo img{
+	width: 70px;
+	height: 70px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: center;
+	font-style: bold;
+    padding: 0px 8px;
+    letter-spacing: 2px;
+}
+/*.nav a:hover{
+	font-size: 19px;
+	color: #007bff;
+	border-bottom: 1px solid #007bff;
+}*/
+.nav .active{
+	font-size: 19px;
+	color: #007bff;
+	border-bottom: 1px solid #007bff;
+}
+.icone .nav a{
+	 font: 15px Arial, sans-serif;
+}
+.icone .nav a:last-child {
+	border-bottom: none;
+}
+.bottom-music{
+	position: fixed;
+	bottom: -25px;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: center;
+}
+.btn-group{
+ margin-top: 43px;
+}
+ .dropdown-menu {
+	position: absolute;
+	width: 100%;
+	height: 350px;
+	overflow-y: scroll;
+	z-index:2;	
+}
+ .list .item {
+	display: flex;
+	padding: 5px 0px;
+	line-height: 1;
+	cursor: pointer;
+}
+.list .item .thumbnail img{
+	padding: 10px;
+	width: 80px;
+}
+.list .item  .details h2{
+  font-size: 14px;
+  font-family: "Montserrat, sans-serif";
+
+}
+.list .item  .details p{
+  font-size: 15px;
+}
+.list .item:hover{
+	background: rgba(000,000,000,0.2);
+}
+.right{
+	padding: 0px;
+	width: 900px;
+	background-color: transparent;
+    background-color: rgba(0,0,0,0.2);
+	position: relative;	
+}
+
+.right .thumbnail img{
+	width: 150px;
+	height: 150px;
+
+	padding: 20px 0px 45px 25px;
+}
+.right .details{
+  position: absolute;
+  top: 20px;
+  left: 170px;
+}
+.right .details h2{
+  font-family: "Montserrat, sans-serif";
+  font-size: 20px;
+  line-height: 0.8;
+  color: white;
+}
+.right .details p{
+  font-family: "Montserrat, sans-serif";
+  font-size: 20px;
+  line-height: 0.8;
+   color: white;
+}
+.seekbar{
+	position: absolute;
+	top: 70px;
+	left: 170px;
+	width: 650px;
+}
+.seekbar-volume{
+	position: absolute;
+	top: 20px;
+	left: 600px;
+	width: 300px;
+}
+.seekbar-volume .fa{
+	color: white;
+	display: inline-block;
+	padding: 15px 5px 5px 5px;
+}
+.seekbar-volume input[type="range"] {
+	outline: none;
+	background: white;	
+    padding: 1px;
+}
+
+.seekbar-volume input[type="range"]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 2px;
+  border: none;
+  border-radius: 3px;
+}
+
+.seekbar-volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: blue;
+  border: 2px solid white;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+ .seekbar input[type="range"] {
+	-webkit-appearance:none;
+	width: 100%;
+	height: 4px;
+	outline: none;
+	background: #aaa;
+	overflow: hidden;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: red;
+  cursor: pointer;
+}
+.seekbar input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance:none;
+	width: 0px;
+	height: 0px;
+	box-shadow: -300px 0px 0px 300px blue;
+}
+
+.controls {
+	position: absolute;
+	top: 29px;
+	left: 400px;
+	display: flex;
+	justify-content: center;
+	margin: 2px 0px;
+}
+ .controls > div {
+	margin:0px 17px;
+	cursor: pointer;
+}
+ .controls i.fa {
+	font-size: 16px;
+	color: #ddd;
+}
+ .controls i.fa:hover {
+	color: blue;
+}
+ .controls > div.play-pause-control i.fa-play {
+	display: none;
+}
+.controls > div.play-pause-control.paused i.fa-play {
+	display: block;
+	padding-top: 4px;
+}
+ .controls > div.play-pause-control.paused i.fa-pause {
+	display: none;
+}
+.muted-or-onmuted {
+	display: inline-block;
+}
+.muted-or-onmuted  .fa-volume-off{
+	display: none;
+}
+
+
+
+
